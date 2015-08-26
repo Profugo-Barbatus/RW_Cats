@@ -46,14 +46,12 @@
   </ThingDef>
 
 
-  <!-- end abstracts -->
-
   <ThingDef ParentName="BaseAnimal">
     <defName>Fluffy_DomesticCat</defName>
     <label>Domestic Cat</label>
     <description>Fluffy balls of DEATH.</description>
     <statBases>
-      <MoveSpeed>3.1</MoveSpeed>
+      <MoveSpeed>3.5</MoveSpeed>
       <ComfyTemperatureMin>-12</ComfyTemperatureMin>
       <MarketValue>250</MarketValue>
       <LeatherAmount>15</LeatherAmount>
@@ -83,7 +81,7 @@
     </verbs>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
-      <petness>1</petness>
+      <petness>0.8</petness>
       <baseBodySize>0.3</baseBodySize>
 			<baseHungerRate>0.15</baseHungerRate>
       <baseHealthScale>0.4</baseHealthScale>
@@ -92,7 +90,7 @@
       <gestationPeriodDays>60</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
-      <wildness>0</wildness>
+      <wildness>0.3</wildness>
       <nuzzleChancePerHour>0.7</nuzzleChancePerHour>
       <litterSizeCurve>
         <points>

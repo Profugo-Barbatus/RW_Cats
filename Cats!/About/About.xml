@@ -3,10 +3,11 @@
 	<name>Cats!</name>
 	<author>Fluffy (l2032)</author>
 	<url></url>
-	<targetVersion>Alpha 12</targetVersion>
+	<targetVersion>Alpha 12B</targetVersion>
 	<description>Adds several breeds of domestic cats to the game.
-		Implemented are:
-		 - Maine Coon
-		 - Miniature Maine Coon
+Implemented are:
+	- Maine Coon
+	- Miniature Maine Coon
+	- European Shorthair
 	</description>
 </ModMetaData>
