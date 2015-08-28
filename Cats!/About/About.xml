@@ -4,12 +4,17 @@
 	<author>Fluffy (l2032)</author>
 	<url></url>
 	<targetVersion>Alpha 12c</targetVersion>
-	<description>Adds several breeds of domestic cats to the game.
+	<description>Adds several breeds of domestic and wild cats to the game.
 Implemented are:
+Domestic Cats
 	- Maine Coon
 	- Miniature Maine Coon
 	- European Shorthair
 	- Norwegian Forest Cat
 	- British Shorthair
+	- Siamese (Huge thanks to Lokidemon!)
+
+Wild Cats
+	- Lion (Huge thanks to Lokidemon!)
 	</description>
 </ModMetaData>
