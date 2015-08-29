@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Abstract="True" Name="ResourceBase" >
+    <thingClass>ThingWithComps</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+  </ThingDef>
+
+  <ThingDef Name="Fluffy_CatFood" ParentName="OrganicProductBase" >
+    <defName>Fluffy_CatFood</defName>
+    <label>processed cat food</label>
+    <description>Processed cat food, made bulkier by adding plant material and various artificial additives. Your cats are guaranteed to love it!</description>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <nutrition>0.2</nutrition>
+      <eatEffect>EatMeat</eatEffect>
+      <soundEat>RawMeat_Eat</soundEat>
+      <isMeat>true</isMeat>
+      <ingestedDirectThought>Fluffy_AteCatFood</ingestedDirectThought>
+    </ingestible>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+      </li>
+    </comps>
+    <graphicData>
+      <texPath>Things/Item/CatFood</texPath>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>.1</DeteriorationRate>
+      <MarketValue>2</MarketValue>
+    </statBases>
+  </ThingDef>
+</Defs>

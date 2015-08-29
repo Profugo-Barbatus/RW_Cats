@@ -69,6 +69,11 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
-		<wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+		<wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+		<wildSpawn_EcoSystemWeight>1.5</wildSpawn_EcoSystemWeight>
+		<wildSpawn_GroupSizeRange>
+			<min>2</min>
+			<max>7</max>
+		</wildSpawn_GroupSizeRange>
 	</PawnKindDef>
 </Defs>
