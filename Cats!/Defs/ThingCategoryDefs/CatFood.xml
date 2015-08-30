@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+
+  <ThingCategoryDef>
+    <defName>Root</defName>
+    <label>root</label>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>Resources</defName>
+    <label>resources</label>
+    <parent>Root</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>Foods</defName>
+    <label>foods</label>
+    <parent>Resources</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>Fluffy_CatFoods</defName>
+    <label>cat food</label>
+    <parent>Foods</parent>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+    <iconPath>Things/Item/CatFood</iconPath>
+  </ThingCategoryDef>
+
+</ThingCategoryDefs>

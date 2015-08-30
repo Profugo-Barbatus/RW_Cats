@@ -42,6 +42,7 @@
 				<li>FoodRaw</li>
 			</categories>
 			<disallowedSpecialFilters>
+				<li>AllowRotten</li>
 				<li>AllowPlantFood</li>
 			</disallowedSpecialFilters>
 		</fixedIngredientFilter>

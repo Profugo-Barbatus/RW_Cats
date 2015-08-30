@@ -46,7 +46,7 @@
       <ingestedDirectThought>Fluffy_AteCatFood</ingestedDirectThought>
     </ingestible>
     <thingCategories>
-      <li>Items</li>
+      <li>Fluffy_CatFoods</li>
     </thingCategories>
     <comps>
       <li Class="CompProperties_Rottable">

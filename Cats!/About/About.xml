@@ -5,7 +5,7 @@
 	<url></url>
 	<targetVersion>Alpha 12c</targetVersion>
 	<description>Adds several breeds of domestic and wild cats to the game.
-Implemented are:
+Features:
 Domestic Cats
 	- Maine Coon
 	- Miniature Maine Coon
@@ -16,5 +16,8 @@ Domestic Cats
 
 Wild Cats
 	- Lion (Huge thanks to Lokidemon!)
+
+Other Things
+	- Processed Cat Food and a feeding bowl
 	</description>
 </ModMetaData>
