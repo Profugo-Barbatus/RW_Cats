@@ -79,4 +79,35 @@
     </inspectorTabs>
     <surfaceType>Item</surfaceType>
   </ThingDef>
+
+  <ThingDef ParentName="FurnitureBase">
+    <defName>Fluffy_ScratchingPole</defName>
+    <label>scratching pole</label>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/ScratchingPost</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>.75</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.5, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <description>Provide your cats with a place to sharpen their claws.</description>
+  </ThingDef>
 </Buildings>
+
