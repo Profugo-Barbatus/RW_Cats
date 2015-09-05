@@ -26,7 +26,7 @@ namespace Fluffy
             {
                 // gain food from fires
                 IEnumerable<Thing> fires = from f in Find.ListerThings.ThingsOfDef(ThingDefOf.Fire)
-                                           where f.Position.InHorDistOf(this.Position, 3)
+                                           where f.Position.InHorDistOf(this.Position, 4)
                                            select f;
 
                 foreach (Fire f in fires)
@@ -37,9 +37,9 @@ namespace Fluffy
 
                 if (this.needs.food.CurLevel > 1) this.needs.food.CurLevel = 1;
 
-                // push heat to the room
-                float energy = 50 * this.health.summaryHealth.SummaryHealthPercent * this.HealthScale;
-                GenTemperature.PushHeat(this.Position, energy);
+                // push heat to the room (now handled with comp in Race.xml
+                // float energy = 50 * this.health.summaryHealth.SummaryHealthPercent * this.HealthScale;
+                // GenTemperature.PushHeat(this.Position, energy);
 
                 // TODO: get hurt by rain
             }

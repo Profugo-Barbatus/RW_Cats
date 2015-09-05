@@ -8,7 +8,7 @@
 		<defName>Fluffy_Feenix</defName>
 		<label>Feenix</label>
 		<race>Fluffy_Feenix</race>
-		<combatPower>250</combatPower>
+		<combatPower>250</combatPower>    
 		<lifeStages>
 			<li>
 				<label>Feenix Ember</label>
@@ -29,14 +29,14 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dropBodyPart>
-		          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
-		          <thing>Fluffy_LivingFire</thing>
-		        </dropBodyPart>
+					<bodyPartGroup>Fluffy_Heart</bodyPartGroup>
+					<thing>Fluffy_LivingFire</thing>
+				</dropBodyPart>
 			</li>
 			<li>
 				<bodyGraphicData>
 					<texPath>ExoticCat/Feenix</texPath>
-					<drawSize>3.5</drawSize>
+					<drawSize>3</drawSize>
 					<color>(255,255,255)</color>
 					<shadowData>
 						<volume>(0.4, 0.4, 0.4)</volume>
@@ -44,9 +44,9 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dropBodyPart>
-		          <bodyPartGroup>HeadAttackTool</bodyPartGroup>
-		          <thing>Fluffy_LivingFire</thing>
-		        </dropBodyPart>
+					<bodyPartGroup>Fluffy_Heart</bodyPartGroup>
+					<thing>Fluffy_LivingFire</thing>
+				</dropBodyPart>
 			</li>
 		</lifeStages>
 		<wildSpawn_spawnWild>false</wildSpawn_spawnWild>

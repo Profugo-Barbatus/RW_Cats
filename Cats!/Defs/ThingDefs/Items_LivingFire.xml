@@ -20,6 +20,7 @@
         <glowColor>(255,150,100,0)</glowColor>
       </li>
     </comps>
+    <tickerType>Normal</tickerType>
     <category>Item</category>
     <tradeTags>
       <li>BodyPartOrImplant</li>
@@ -42,7 +43,6 @@
       <DeteriorationRate>1</DeteriorationRate>
       <MarketValue>10000</MarketValue>
     </statBases>
-    <tickerType>Rare</tickerType>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Things/Item/LivingFire</texPath>

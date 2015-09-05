@@ -41,7 +41,7 @@
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <hediffGiverSets>
         <li>OrganicStandard</li>
-      </hediffGiverSets>as
+      </hediffGiverSets>
     </race>
   </ThingDef>
 
@@ -56,7 +56,7 @@
       <isFlesh>true</isFlesh>
       <hasGenders>true</hasGenders>
       <nameGenerator>NamerAnimalGeneric</nameGenerator>
-      <manhunterOnDamageChance>.5</manhunterOnDamageChance>
+      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
       <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
       <hediffGiverSets>
         <li>OrganicStandard</li>
@@ -314,8 +314,21 @@
   <ThingDef ParentName="BaseAnimal">
     <defName>Fluffy_Feenix</defName>
     <thingClass>Fluffy.Feenix</thingClass>
+    <!-- Tried thingClass Pawn, didn't work -->
     <label>Feenix</label>
     <description>Said to be fire incarnate, a single Feenix can lay waste to an entire colony.</description>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <li>
+        <compClass>CompHeatPusher</compClass>
+        <heatPerSecond>500</heatPerSecond>
+        <!-- no max? -->
+      </li>
+    </comps>
     <statBases>
       <Flammability>0</Flammability>
       <LeatherAmount>0</LeatherAmount>
@@ -357,10 +370,10 @@
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
-      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <body>QuadrupedAnimalWithPawsTailAndHeartGroup</body>
       <petness>0</petness>
       <baseBodySize>2.5</baseBodySize>
-      <baseHungerRate>0</baseHungerRate>
+      <baseHungerRate>2</baseHungerRate>
       <baseHealthScale>2.5</baseHealthScale>
       <diet>Omnivorous</diet>
       <nameOnTameChance>1</nameOnTameChance>

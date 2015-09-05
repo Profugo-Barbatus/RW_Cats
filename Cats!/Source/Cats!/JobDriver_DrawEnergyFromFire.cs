@@ -53,15 +53,10 @@ namespace Fluffy
             TargetInfo target = new TargetInfo(cell);
             TargetInfo target2 = null;
             TargetInfo target3 = null;
-            Pawn pawn = toil.actor;
+            Pawn pawn = this.pawn;
 
-            //if (pawn == null) Log.Message("Toil actor is null");
-            //if (this.pawn == null) Log.Message("This.pawn is null");
+            //if (pawn == null) Log.Message("pawn is null");
 
-            if (this.pawn != null)
-            {
-                pawn = this.pawn;
-            }
             int attempt = 0;
 
             //Log.Message("Pawn: " + pawn.ToString());
