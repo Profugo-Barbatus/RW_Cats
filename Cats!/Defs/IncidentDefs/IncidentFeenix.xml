@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef>
+    <defName>Fluffy_FeenixPasses</defName>
+    <workerClass>Fluffy.IncidentWorker_FeenixPasses</workerClass>
+    <chance>0.7</chance>
+    <minRefireDays>70</minRefireDays>
+  </IncidentDef>
+  
+</Defs>
