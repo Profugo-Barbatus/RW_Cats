@@ -15,12 +15,12 @@ using RimWorld;            // RimWorld specific functions are found here (like '
 
 namespace Fluffy
 {
-    public class JobDriver_IgniteFire : JobDriver
+    public class JobDriver_Scratch : JobDriver
     {
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return this.GotoThing(this.TargetA.Cell, PathEndMode.Touch).FailOnDespawned(TargetIndex.A);
-            yield return this.Ignite(this.TargetThingA);
+            yield return this.Scratch(this.TargetThingA).FailOnDespawnedOrForbidden(TargetIndex.A);
             yield break;
         }
 
@@ -39,31 +39,27 @@ namespace Fluffy
             return toil;
         }
 
-        private Toil Ignite(Thing target)
+        private Toil Scratch(Thing target)
         {
             Toil toil = new Toil();
+            
+            //Log.Message("Pawn: " + pawn.ToString() + ", target: " + target.ToString());
+
             toil.initAction = delegate
             {
-                Pawn feenix = this.pawn;
-                if (target.FlammableNow && !target.IsBurning())
+                Pawn pawn = this.pawn;
+
+                if (target.HitPoints > 10)
                 {
-                    if (target.CanEverAttachFire())
+                    if (!(target.def.defName == "Fluffy_ScratchingPole"))
                     {
-                        target.TryAttachFire(1f);
+                        target.HitPoints -= 2;
                     }
-                    else
-                    {
-                        FireUtility.TryStartFireIn(target.Position, 1f);
-                    }
-                    PawnUtility.ForceWait(feenix, 250, target);
-                }
-                else
-                {
-                    return;
                 }
             };
+
             toil.defaultCompleteMode = ToilCompleteMode.Delay;
-            toil.defaultDuration = 250;
+            toil.defaultDuration = 300;
             return toil;
         }
     }

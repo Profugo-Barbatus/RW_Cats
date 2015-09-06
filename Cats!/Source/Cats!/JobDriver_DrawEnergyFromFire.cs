@@ -17,9 +17,6 @@ namespace Fluffy
 {
     public class JobDriver_DrawEnergyFromFire : JobDriver
     {
-        // locomotionUrgency doesnt actually work =/
-        //protected LocomotionUrgency locomotionUrgency = LocomotionUrgency.Walk;
-
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return this.GotoThing(this.TargetA.Cell, PathEndMode.Touch).FailOnDespawned(TargetIndex.A);
@@ -80,6 +77,7 @@ namespace Fluffy
 
             toil.initAction = delegate
             {
+                this.CurJob.locomotionUrgency = LocomotionUrgency.Walk;
                 pawn.pather.StartPath(target3, PathEndMode.OnCell);
             };
 

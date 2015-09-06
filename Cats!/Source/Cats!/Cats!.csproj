@@ -51,6 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobDriver_CrazyTime.cs" />
+    <Compile Include="JobGiver_CrazyTime.cs" />
+    <Compile Include="JobGiver_GetRestPawnBedOK.cs" />
+    <Compile Include="JobDriver_Scratch.cs" />
+    <Compile Include="JobGiver_Scratch.cs" />
     <Compile Include="JobDriver_IgniteFire.cs" />
     <Compile Include="Pawn_Feenix.cs" />
     <Compile Include="JobDriver_DrawEnergyFromFire.cs" />

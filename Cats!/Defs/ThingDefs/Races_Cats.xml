@@ -99,6 +99,7 @@
     </verbs>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
+      <thinkTree>DomesticCat</thinkTree>
       <petness>0.8</petness>
       <baseBodySize>0.3</baseBodySize>
       <baseHungerRate>0.15</baseHungerRate>
