@@ -141,7 +141,7 @@
 
             <!-- Crazy time! -->
             <li Class="ThinkNode_ChancePerHour_Constant">
-              <chancePerHour>1</chancePerHour>
+              <chancePerHour>.1</chancePerHour>
               <subNodes>
                 <li Class="Fluffy.JobGiver_CrazyTime" />
               </subNodes>
