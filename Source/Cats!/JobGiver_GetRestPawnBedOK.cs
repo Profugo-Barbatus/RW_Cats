@@ -17,6 +17,70 @@ namespace Fluffy
 {
     public class JobGiver_GetRestPawnBedOK : JobGiver_GetRest
     {
+        public override float GetPriority(Pawn pawn)
+        {
+            Need_Rest rest = pawn.needs.rest;
+            if (rest == null)
+            {
+                return 0f;
+            }
+            TimeAssignmentDef timeAssignmentDef;
+            if (pawn.RaceProps.Humanlike)
+            {
+                timeAssignmentDef = ((pawn.timetable != null) ? pawn.timetable.CurrentAssignment : TimeAssignmentDefOf.Anything);
+            }
+            else
+            {
+                int hourOfDay = GenDate.HourOfDay;
+                int napStart = Rand.RangeInclusive(10, 14);
+                int napEnd = Rand.RangeInclusive(15, 18);
+                if (hourOfDay < 6 || hourOfDay > 22 || hourOfDay > napStart && napEnd < 18)
+                {
+                    timeAssignmentDef = TimeAssignmentDefOf.Sleep;
+                }
+                else
+                {
+                    timeAssignmentDef = TimeAssignmentDefOf.Anything;
+                }
+            }
+            float curLevel = rest.CurLevel;
+            if (timeAssignmentDef == TimeAssignmentDefOf.Anything)
+            {
+                if (curLevel < 0.3f)
+                {
+                    return 8f;
+                }
+                return 0f;
+            }
+            else
+            {
+                if (timeAssignmentDef == TimeAssignmentDefOf.Work)
+                {
+                    return 0f;
+                }
+                if (timeAssignmentDef == TimeAssignmentDefOf.Joy)
+                {
+                    if (curLevel < 0.3f)
+                    {
+                        return 8f;
+                    }
+                    return 0f;
+                }
+                else
+                {
+                    if (timeAssignmentDef != TimeAssignmentDefOf.Sleep)
+                    {
+                        throw new NotImplementedException();
+                    }
+                    if (curLevel < 0.9f)
+                    {
+                        return 8f;
+                    }
+                    return 0f;
+                }
+            }
+        }
+
         protected override Job TryGiveTerminalJob(Pawn pawn)
         {
             if (Find.TickManager.TicksGame - pawn.mindState.lastDisturbanceTick < 400)
