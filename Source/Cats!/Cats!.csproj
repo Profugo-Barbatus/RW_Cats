@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompPropertiesSnow.cs" />
+    <Compile Include="CompSnow.cs" />
     <Compile Include="JobDriver_CrazyTime.cs" />
     <Compile Include="JobGiver_CrazyTime.cs" />
     <Compile Include="JobGiver_GetRestPawnBedOK.cs" />

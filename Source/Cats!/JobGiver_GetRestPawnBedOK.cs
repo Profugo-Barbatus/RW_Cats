@@ -96,6 +96,18 @@ namespace Fluffy
                 return new Job(JobDefOf.LayDown, catbed);
             }
 
+            // sleep in owners bed 1/3 of the remainder
+            if (Rand.Range(0f, 1f) > .33f && pawn.playerSettings.master != null)
+            {
+                Building_Bed masterbed = pawn.playerSettings.master.ownership.OwnedBed;
+                if (masterbed != null)
+                {
+                    List<IntVec3> bedcells = masterbed.OccupiedRect().Cells.ToList();
+                    bedcells.Remove(masterbed.Position);
+                    return new Job(JobDefOf.LayDown, bedcells.RandomElement());
+                }
+            }
+
             // find all non-prisoner, non-medical beds
             IEnumerable<Building_Bed> pawnbeds = from b in Find.ListerBuildings.AllBuildingsColonistOfClass<Building_Bed>()
                                           where !b.ForPrisoners && !b.Medical && pawn.CanReach(b.Position, PathEndMode.OnCell, Danger.Some)
@@ -105,8 +117,8 @@ namespace Fluffy
             IEnumerable<Building> surfaces = from t in Find.ListerBuildings.allBuildingsColonist as List<Building>
                                                where t.def.surfaceType != SurfaceType.None
                                                  && pawn.CanReach(t.Position, PathEndMode.OnCell, Danger.Some)
-                                                 && t.def.defName != "Stove"
-                                               select t;
+                                                 && t.def.defName != "CookStove"
+                                             select t;
 
 
             // try to sleep on beds that occupy more than one space, and don't already have a cat on them.

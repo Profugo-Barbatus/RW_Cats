@@ -50,4 +50,47 @@ namespace Fluffy
             return true;
         }
     }
+
+    public class IncidentWorker_IcicatPasses : IncidentWorker_MakeMapCondition
+    {
+        public override bool TryExecute(IncidentParms parms)
+        {
+
+
+
+            IntVec3 intVec;
+            if (!RCellFinder.TryFindRandomPawnEntryCell(out intVec))
+            {
+                return false;
+            }
+            PawnKindDef feenix = PawnKindDef.Named("Fluffy_Icicat");
+            IntVec3 invalid = IntVec3.Invalid;
+            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, 10f, out invalid))
+            {
+                invalid = IntVec3.Invalid;
+            }
+            Pawn pawn = null;
+            IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, 10);
+            pawn = PawnGenerator.GeneratePawn(feenix, null, false, 0);
+            GenSpawn.Spawn(pawn, loc, Rot4.Random);
+
+            int duration = Rand.RangeInclusive(90000, 150000);
+
+            Find.MapConditionManager.RegisterCondition(MapConditionMaker.MakeCondition(this.def.mapCondition, duration));
+            pawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame +duration;
+            if (invalid.IsValid)
+            {
+                pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, 10);
+            }
+
+            Find.LetterStack.ReceiveLetter("LetterLabelIcicatPasses".Translate(new object[]
+            {
+                feenix.label
+            }).CapitalizeFirst(), "LetterIcicatPasses".Translate(new object[]
+            {
+                feenix.label
+            }), LetterType.Good, pawn, null);
+            return true;
+        }
+    }
 }

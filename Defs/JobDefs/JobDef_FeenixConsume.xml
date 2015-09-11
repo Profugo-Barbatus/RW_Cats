@@ -4,13 +4,13 @@
 	<JobDef>
 		<defName>Fluffy_DrawEnergyFromFire</defName>
 		<driverClass>Fluffy.JobDriver_DrawEnergyFromFire</driverClass>
-		<reportString>Drawing sustenaince from fire.</reportString>
+		<reportString>Drawing sustenance from fire.</reportString>
 	</JobDef>
 
 	<JobDef>
 		<defName>Fluffy_IgniteFire</defName>
 		<driverClass>Fluffy.JobDriver_IgniteFire</driverClass>
-		<reportString>Igniting fire for sustenaince.</reportString>
+		<reportString>Igniting fire for sustenance.</reportString>
 	</JobDef>
 
  </JobDefs>

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Verse;
 
 namespace Fluffy
@@ -19,7 +16,7 @@ namespace Fluffy
         public CompPropertiesSnow()
         {
         }
-
+        
         public CompPropertiesSnow(Type compClass) : base(compClass)
         {
         }

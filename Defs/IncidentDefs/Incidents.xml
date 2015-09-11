@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef>
+    <defName>Fluffy_FeenixPasses</defName>
+    <workerClass>Fluffy.IncidentWorker_FeenixPasses</workerClass>
+    <chance>0.5</chance>
+    <minRefireDays>70</minRefireDays>
+  </IncidentDef>
+
+   <IncidentDef>
+    <defName>Fluffy_IcicatPasses</defName>
+    <workerClass>Fluffy.IncidentWorker_IcicatPasses</workerClass>    
+    <mapCondition>ColdSnap</mapCondition>
+    <letterLabel>Cold snap</letterLabel>
+    <letterText>An unusual cold snap has set in. Watch out for hypothermia and dying crops.</letterText>
+    <letterType>BadNonUrgent</letterType>
+    <chance>0.5</chance>
+    <minRefireDays>70</minRefireDays>
+    <durationDays>
+      <min>3.0</min>
+      <max>7.0</max>
+    </durationDays>
+  </IncidentDef>
+  
+</Defs>
