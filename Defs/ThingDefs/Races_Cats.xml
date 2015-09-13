@@ -430,8 +430,8 @@
       <Flammability>1</Flammability>
       <LeatherAmount>0</LeatherAmount>
       <MoveSpeed>6.00</MoveSpeed>
-      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
-      <ComfyTemperatureMax>99999</ComfyTemperatureMax>
+      <ComfyTemperatureMin>-999999</ComfyTemperatureMin>
+      <ComfyTemperatureMax>20</ComfyTemperatureMax>
       <MarketValue>5000</MarketValue>
     </statBases>
     <verbs>
