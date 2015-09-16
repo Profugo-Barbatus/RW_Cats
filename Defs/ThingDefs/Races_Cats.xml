@@ -192,7 +192,14 @@
       <gestationPeriodDays>70</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
-      <wildness>0.80</wildness>
+      <wildness>0.80</wildness>      
+      <wildBiomes>
+        <li>
+          <animal>Fluffy_Lion</animal>
+          <biome>AridShrubland</biome>
+          <commonality>.3</commonality>
+        </li>
+      </wildBiomes>
       <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
       <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
       <litterSizeCurve>
@@ -274,7 +281,14 @@
       <gestationPeriodDays>65</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
-      <wildness>0.80</wildness>
+      <wildness>0.80</wildness>      
+      <wildBiomes>
+        <li>
+          <animal>Fluffy_Tiger</animal>
+          <biome>TropicalRainforest</biome>
+          <commonality>.3</commonality>
+        </li>
+      </wildBiomes>
       <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
       <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
       <litterSizeCurve>
