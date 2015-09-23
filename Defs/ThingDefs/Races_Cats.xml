@@ -348,6 +348,8 @@
       <Flammability>0</Flammability>
       <LeatherAmount>0</LeatherAmount>
       <MoveSpeed>6.00</MoveSpeed>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <ComfyTemperatureMax>99999</ComfyTemperatureMax>
       <MarketValue>5000</MarketValue>
@@ -389,7 +391,7 @@
       <petness>0</petness>
       <baseBodySize>2.5</baseBodySize>
       <baseHungerRate>2</baseHungerRate>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>4.5</baseHealthScale>
       <diet>Omnivorous</diet>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Intermediate</trainableIntelligence>
@@ -446,6 +448,8 @@
       <MoveSpeed>6.00</MoveSpeed>
       <ComfyTemperatureMin>-999999</ComfyTemperatureMin>
       <ComfyTemperatureMax>20</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
       <MarketValue>5000</MarketValue>
     </statBases>
     <verbs>
@@ -485,11 +489,11 @@
       <petness>0</petness>
       <baseBodySize>2.5</baseBodySize>
       <baseHungerRate>2</baseHungerRate>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>5.5</baseHealthScale>
       <diet>Herbivorous</diet>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
-      <wildness>0.99</wildness>
+      <wildness>0.9</wildness>
       <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <lifeExpectancy>500</lifeExpectancy>
