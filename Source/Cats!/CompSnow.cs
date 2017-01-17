@@ -6,33 +6,36 @@ namespace Fluffy
 {
 	public class CompSnow : ThingComp
 	{
+        // we need to replace props as the base object doesn't have fields for our properties.
 		public new CompPropertiesSnow props;
+
+	    public float Temperature => GenTemperature.GetTemperatureForCell( parent.Position, parent.MapHeld );
 
         public override void CompTick()
         {
             base.CompTick();
-            if (this.parent.IsHashIntervalTick(60)) {
-
-                if (this.parent.Position.GetTemperature() > this.props.heatSuckMinTemperature)
+            if (parent.IsHashIntervalTick(60)) {
+                
+                if ( Temperature > props.heatSuckMinTemperature)
                 {
-                    GenTemperature.PushHeat(this.parent.Position, - this.props.coldPerSecond);
+                    GenTemperature.PushHeat(parent.Position, parent.MapHeld, - props.coldPerSecond);
                 }
 
-                SnowUtility.AddSnowRadial(this.parent.Position, this.props.snowRadius, this.props.snowDepth);
+                SnowUtility.AddSnowRadial(parent.Position, parent.Map, props.snowRadius, props.snowDepth);
             }
         }
 
         public override void Initialize(CompProperties vprops)
         {
             base.Initialize(vprops);
-            this.props = (vprops as CompPropertiesSnow);
-            if (this.props == null)
+            props = (vprops as CompPropertiesSnow);
+            if (props == null)
             {
                 Log.Warning("Props went horribly wrong.");
-                this.props.snowDepth = 1f;
-                this.props.snowRadius = 5f;
-                this.props.heatSuckMinTemperature = -10f;
-                this.props.coldPerSecond = 200f;
+                props.snowDepth = 1f;
+                props.snowRadius = 5f;
+                props.heatSuckMinTemperature = -10f;
+                props.coldPerSecond = 200f;
             }
         }
     }

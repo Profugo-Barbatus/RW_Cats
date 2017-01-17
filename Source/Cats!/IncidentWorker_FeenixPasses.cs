@@ -20,24 +20,24 @@ namespace Fluffy
         public override bool TryExecute(IncidentParms parms)
         {
             IntVec3 intVec;
-            if (!RCellFinder.TryFindRandomPawnEntryCell(out intVec))
+            Map map = (Map) parms.target;
+            if (!RCellFinder.TryFindRandomPawnEntryCell(out intVec, map ))
             {
                 return false;
             }
             PawnKindDef feenix = PawnKindDef.Named("Fluffy_Feenix");
             IntVec3 invalid = IntVec3.Invalid;
-            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, 10f, out invalid))
+            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, map, 10f, out invalid))
             {
                 invalid = IntVec3.Invalid;
             }
-            Pawn pawn = null;
-            IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, 10);
-            pawn = PawnGenerator.GeneratePawn(feenix, null, false, 0);
-            GenSpawn.Spawn(pawn, loc, Rot4.Random);
+            IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, map, 10);
+            Pawn pawn = PawnGenerator.GeneratePawn( feenix, null );
+            GenSpawn.Spawn( pawn, loc, map );
             pawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame + Rand.RangeInclusive(90000, 150000);
             if (invalid.IsValid)
             {
-                pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, 10);
+                pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, map, 10);
             }
 
             Find.LetterStack.ReceiveLetter("LetterLabelFeenixPasses".Translate(new object[]
@@ -55,32 +55,29 @@ namespace Fluffy
     {
         public override bool TryExecute(IncidentParms parms)
         {
-
-
-
             IntVec3 intVec;
-            if (!RCellFinder.TryFindRandomPawnEntryCell(out intVec))
+            Map map = (Map) parms.target;
+            if (!RCellFinder.TryFindRandomPawnEntryCell(out intVec, map))
             {
                 return false;
             }
             PawnKindDef feenix = PawnKindDef.Named("Fluffy_Icicat");
             IntVec3 invalid = IntVec3.Invalid;
-            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, 10f, out invalid))
+            if (!RCellFinder.TryFindRandomCellOutsideColonyNearTheCenterOfTheMap(intVec, map, 10f, out invalid))
             {
                 invalid = IntVec3.Invalid;
             }
-            Pawn pawn = null;
-            IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, 10);
-            pawn = PawnGenerator.GeneratePawn(feenix, null, false, 0);
-            GenSpawn.Spawn(pawn, loc, Rot4.Random);
+            IntVec3 loc = CellFinder.RandomClosewalkCellNear(intVec, map, 10);
+            Pawn pawn = PawnGenerator.GeneratePawn(feenix, null);
+            GenSpawn.Spawn(pawn, loc, map );
 
             int duration = Rand.RangeInclusive(90000, 150000);
 
-            Find.MapConditionManager.RegisterCondition(MapConditionMaker.MakeCondition(this.def.mapCondition, duration));
+            map.mapConditionManager.RegisterCondition(MapConditionMaker.MakeCondition(def.mapCondition, duration));
             pawn.mindState.exitMapAfterTick = Find.TickManager.TicksGame +duration;
             if (invalid.IsValid)
             {
-                pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, 10);
+                pawn.mindState.forcedGotoPosition = CellFinder.RandomClosewalkCellNear(invalid, map, 10);
             }
 
             Find.LetterStack.ReceiveLetter("LetterLabelIcicatPasses".Translate(new object[]

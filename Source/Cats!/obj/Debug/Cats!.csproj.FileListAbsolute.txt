@@ -1,3 +1,6 @@
 C:\Users\Karel\Desktop\RimWorld914Win\Mods\Cats!\Assemblies\Cats!.dll
 C:\Users\Karel\Desktop\RimWorld914Win\Mods\Cats!\Source\Cats!\obj\Debug\Cats!.dll
 C:\Users\Karel\Desktop\RimWorld914Win\Mods\Cats!\Source\Cats!\obj\Debug\Cats!.csprojResolveAssemblyReference.cache
+C:\Users\karel\Dropbox\Other\RW_Mods\Fluffy Mods\Cats!\Source\Cats!\obj\Debug\Cats!.csprojResolveAssemblyReference.cache
+C:\Users\karel\Dropbox\Other\RW_Mods\Fluffy Mods\Cats!\Source\Cats!\obj\Debug\Cats!.dll
+C:\Users\karel\Dropbox\Other\RW_Mods\Fluffy Mods\Cats!\Assemblies\Cats!.dll

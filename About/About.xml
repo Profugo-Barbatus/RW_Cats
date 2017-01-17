@@ -1,11 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ModMetaData>
-	<name>Cats!</name>
-	<author>Fluffy (l2032)</author>
-	<url></url>
-	<targetVersion>Alpha 12c</targetVersion>
-	<description>Features:
-	- Various domestic, wild and rare, incident-based cats.
-	- Cat Behaviour (Scratching furniture, sleep wherever they please and Crazy Time!)
-	</description>
+  <name>Cats!</name>
+  <author>Fluffy (l2032)</author>
+  <url/>
+  <targetVersion>0.16.1393</targetVersion>
+  <description>&lt;size=24&gt;Contributors&lt;/size&gt;
+
+Karel Kroeze:    
+
+tag:Fluffylicious
+
+</description>
 </ModMetaData>

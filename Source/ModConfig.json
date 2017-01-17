@@ -1,0 +1,19 @@
+{
+    "name": "Cats!",
+    "version": {
+        "phase": 0,
+        "alpha": 16,
+        "major": 0,
+        "minor": 0
+    },
+    "visibility": 0,
+    "git_repo": "RW_Cats",
+    "git_user": "FluffierThanThou",
+    "contributors": {
+        "Karel Kroeze": ""
+    },
+    "changenote": "",
+    "tags": [
+        "Fluffylicious"
+    ]
+}
