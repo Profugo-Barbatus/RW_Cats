@@ -1,7 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?><DefPackage-SoundDef>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
 
   <SoundDef>
     <defName>Fluffy_Lion_Angry</defName>  
+	<context>MapOnly</context>
     <label></label>  
     <eventNames>
       <li>Fluffy_Pawn_Lion_Angry</li>
@@ -26,6 +28,7 @@
 
   <SoundDef>
     <defName>Fluffy_Lion_Call</defName>  
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Lion_Call</li>
     </eventNames>  
@@ -45,6 +48,7 @@
 
   <SoundDef>
     <defName>Fluffy_Lion_Death</defName>  
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Lion_Death</li>
     </eventNames>  
@@ -61,6 +65,7 @@
 
   <SoundDef>
     <defName>Fluffy_Lion_Hurt</defName>  
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Lion_Hurt</li>
     </eventNames>  
@@ -78,4 +83,4 @@
     </subSounds>
   </SoundDef>
 
-</DefPackage-SoundDef>
+</Defs>

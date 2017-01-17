@@ -6,16 +6,14 @@
     <description>The heart of an extinguished Feenix, still pulsing with heat. Prized by traders for their supposed medicinal values and uses in alchemy.</description>
     <thingClass>ThingWithComps</thingClass>
     <comps>
-      <li>
-        <compClass>CompHeatPusher</compClass>
+      <li Class="CompProperties_HeatPusher">
         <heatPushMaxTemperature>50</heatPushMaxTemperature>
         <heatPerSecond>100</heatPerSecond>
       </li>     
       <li>
         <compClass>CompForbiddable</compClass>
       </li>
-      <li>
-        <compClass>CompGlower</compClass>
+      <li Class="CompProperties_Glower">
         <glowRadius>3</glowRadius>
         <glowColor>(255,150,100,0)</glowColor>
       </li>
@@ -26,7 +24,7 @@
       <li>BodyPartOrImplant</li>
     </tradeTags>
     <thingCategories>
-      <li>BodyPartsAndImplants</li>
+      <li>BodyParts</li>
     </thingCategories>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <useHitPoints>true</useHitPoints>

@@ -32,9 +32,7 @@
       <LeatherAmount>20</LeatherAmount>
     </statBases>
     <race>
-      <thinkTree>Animal</thinkTree>
-      <minFoodPreferability>Plant</minFoodPreferability>
-      <isFlesh>true</isFlesh>
+      <thinkTreeMain>Animal</thinkTreeMain>
       <hasGenders>true</hasGenders>
       <nameGenerator>NamerAnimalGeneric</nameGenerator>
       <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
@@ -51,9 +49,7 @@
       <LeatherAmount>35</LeatherAmount>
     </statBases>
     <race>
-      <thinkTree>Animal</thinkTree>
-      <minFoodPreferability>Plant</minFoodPreferability>
-      <isFlesh>true</isFlesh>
+      <thinkTreeMain>Animal</thinkTreeMain>
       <hasGenders>true</hasGenders>
       <nameGenerator>NamerAnimalGeneric</nameGenerator>
       <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
@@ -77,21 +73,21 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.66</defaultCooldownTime>
         <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -99,18 +95,18 @@
     </verbs>
     <race>
       <body>QuadrupedAnimalWithPawsAndTail</body>
-      <thinkTree>DomesticCat</thinkTree>
+      <thinkTreeMain>DomesticCat</thinkTreeMain>
       <petness>0.8</petness>
       <baseBodySize>0.3</baseBodySize>
       <baseHungerRate>0.15</baseHungerRate>
       <baseHealthScale>0.4</baseHealthScale>
-      <diet>Carnivorous</diet>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <leatherLabel>catskin</leatherLabel>
       <gestationPeriodDays>60</gestationPeriodDays>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0.3</wildness>
-      <nuzzleChancePerHour>0.7</nuzzleChancePerHour>
+      <nuzzleMtbHours>24</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -159,21 +155,21 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <defaultCooldownTime>2</defaultCooldownTime>
         <meleeDamageBaseAmount>14</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -185,7 +181,7 @@
       <baseBodySize>1.5</baseBodySize>
       <baseHungerRate>0.8</baseHungerRate>
       <baseHealthScale>1.5</baseHealthScale>
-      <diet>Carnivorous</diet>
+      <foodType>CarnivoreAnimal</foodType>
       <leatherColor>(255,153,51)</leatherColor>
       <leatherLabel>lion fur</leatherLabel>
       <leatherInsulation>2.0</leatherInsulation>
@@ -194,14 +190,10 @@
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0.80</wildness>      
       <wildBiomes>
-        <li>
-          <animal>Fluffy_Lion</animal>
-          <biome>AridShrubland</biome>
-          <commonality>.3</commonality>
-        </li>
+        <AridShrubland>.3</AridShrubland>
       </wildBiomes>
       <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
-      <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
+      <nuzzleMtbHours>36</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -248,21 +240,21 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <defaultCooldownTime>2</defaultCooldownTime>
         <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
         <meleeDamageDef>Bite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -274,7 +266,7 @@
       <baseBodySize>1.5</baseBodySize>
       <baseHungerRate>0.8</baseHungerRate>
       <baseHealthScale>1.4</baseHealthScale>
-      <diet>Carnivorous</diet>
+      <foodType>CarnivoreAnimal</foodType>
       <leatherColor>(255,132,24)</leatherColor>
       <leatherLabel>tiger fur</leatherLabel>
       <leatherInsulation>2.0</leatherInsulation>
@@ -283,14 +275,10 @@
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0.80</wildness>      
       <wildBiomes>
-        <li>
-          <animal>Fluffy_Tiger</animal>
-          <biome>TropicalRainforest</biome>
-          <commonality>.3</commonality>
-        </li>
+        <TropicalRainforest>.3</TropicalRainforest>
       </wildBiomes>
       <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
-      <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
+      <nuzzleMtbHours>36</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
           <li>(0.5, 0)</li>
@@ -333,13 +321,11 @@
     <label>Feenix</label>
     <description>Said to be fire incarnate, a single Feenix can lay waste to an entire colony.</description>
     <comps>
-      <li>
-        <compClass>CompGlower</compClass>
+      <li Class="CompProperties_Glower">
         <glowRadius>6</glowRadius>
         <glowColor>(255,150,100,0)</glowColor>
       </li>
-      <li>
-        <compClass>CompHeatPusher</compClass>
+      <li Class="CompProperties_HeatPusher">
         <heatPerSecond>250</heatPerSecond>
         <!-- no max? -->
       </li>
@@ -357,31 +343,29 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>14</meleeDamageBaseAmount>
         <meleeDamageDef>Flame</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>14</meleeDamageBaseAmount>
         <meleeDamageDef>Flame</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.66</defaultCooldownTime>
         <meleeDamageBaseAmount>28</meleeDamageBaseAmount>
         <meleeDamageDef>Flame</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
-      <thinkTree>Feenix</thinkTree> 
+      <thinkTreeMain>Feenix</thinkTreeMain> 
       <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
-      <minFoodPreferability>Plant</minFoodPreferability>
-      <isFlesh>true</isFlesh>
       <hasGenders>false</hasGenders>
       <nameGenerator>NamerAnimalGeneric</nameGenerator>
       <hediffGiverSets>
@@ -392,7 +376,7 @@
       <baseBodySize>2.5</baseBodySize>
       <baseHungerRate>2</baseHungerRate>
       <baseHealthScale>4.5</baseHealthScale>
-      <diet>Omnivorous</diet>
+      <foodType>OmnivoreRoughAnimal</foodType>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Intermediate</trainableIntelligence>
       <wildness>0.99</wildness>
@@ -429,8 +413,7 @@
     <label>Icicat</label>
     <description>Born of frost, Icicats leave a trail of frost wherever they go. Solitary creatures, their fur and heart are highly prized on the rim worlds for their high insulation, and supposed medicinal usage.</description>
     <comps>
-      <li>
-        <compClass>CompGlower</compClass>
+      <li Class="CompProperties_Glower">
         <glowRadius>6</glowRadius>
         <glowColor>(175,238,238,0)</glowColor>
       </li>
@@ -455,31 +438,29 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Frostbite</meleeDamageDef>
         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <defaultCooldownTime>.83</defaultCooldownTime>
         <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
         <meleeDamageDef>Frostbite</meleeDamageDef>
         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTime>1.66</defaultCooldownTime>
         <meleeDamageBaseAmount>18</meleeDamageBaseAmount>
         <meleeDamageDef>Frostbite</meleeDamageDef>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
-      <thinkTree>Animal</thinkTree> 
+      <thinkTreeMain>Animal</thinkTreeMain> 
       <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
-      <minFoodPreferability>Plant</minFoodPreferability>
-      <isFlesh>true</isFlesh>
       <hasGenders>false</hasGenders>
       <nameGenerator>NamerAnimalGeneric</nameGenerator>
       <hediffGiverSets>
@@ -490,7 +471,7 @@
       <baseBodySize>2.5</baseBodySize>
       <baseHungerRate>2</baseHungerRate>
       <baseHealthScale>5.5</baseHealthScale>
-      <diet>Herbivorous</diet>
+      <foodType>VegetarianRoughAnimal</foodType>
       <nameOnTameChance>1</nameOnTameChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <wildness>0.9</wildness>

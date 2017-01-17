@@ -21,7 +21,9 @@
         <!-- Leave if timed out -->
         <li Class="ThinkNode_ConditionalExitTimedOut">
           <subNodes>
-            <li Class="JobGiver_ExitMapWalkRandom" />
+            <li Class="JobGiver_ExitMapRandom">
+              <defaultLocomotion>Walk</defaultLocomotion>     
+			</li>
           </subNodes>
         </li>
         
@@ -59,16 +61,18 @@
         <li Class="JobGiver_LayEgg" />
 
         <!-- Tame animal -->
-        <li Class="ThinkNode_ConditionalHasFaction">
+        <li Class="ThinkNode_ConditionalColonyFaction">
           <subNodes>
             <!-- Trained behavior: obedience: Follow and defend master -->
             <li Class="ThinkNode_ConditionalTrainableCompleted">
               <trainable>Obedience</trainable>
               <subNodes>
-                <li Class="ThinkNode_ConditionalMasterDrafted" >
+                <li Class="ThinkNode_ConditionalShouldFollowMaster" >
                   <subNodes>
                     <li Class="JobGiver_AIFollowMaster"/>
-                    <li Class="JobGiver_AIDefendMaster" />
+                    <li Class="JobGiver_AIDefendMaster">
+                      <attackMeleeThreatEvenIfNotHostile>true</attackMeleeThreatEvenIfNotHostile>
+                    </li>
                     <li Class="JobGiver_WanderNearMaster" />
                   </subNodes>
                 </li>
@@ -120,7 +124,7 @@
 
             <!-- Trained behavior: Haul-->
             <li Class="ThinkNode_ChancePerHour_Constant">
-              <chancePerHour>0.50</chancePerHour>
+              <mtbHours>1.5</mtbHours>
               <subNodes>
                 <li Class="ThinkNode_ConditionalTrainableCompleted">
                   <trainable>Haul</trainable>
@@ -133,7 +137,7 @@
 
             <!-- Scratch that itch -->
             <li Class="ThinkNode_ChancePerHour_Constant">
-              <chancePerHour>.1</chancePerHour>
+              <mtbHours>24</mtbHours>
               <subNodes>
                 <li Class="Fluffy.JobGiver_Scratch" />
               </subNodes>
@@ -141,7 +145,7 @@
 
             <!-- Crazy time! -->
             <li Class="ThinkNode_ChancePerHour_Constant">
-              <chancePerHour>.1</chancePerHour>
+              <mtbHours>24</mtbHours>
               <subNodes>
                 <li Class="Fluffy.JobGiver_CrazyTime" />
               </subNodes>

@@ -36,7 +36,7 @@
       </shadowData>
     </graphicData>
     <rotatable>false</rotatable>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
     <stuffCategories>
@@ -93,7 +93,7 @@
       </shadowData>
     </graphicData>
     <rotatable>true</rotatable>
-    <altitudeLayer>Waist</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
     <stuffCategories>

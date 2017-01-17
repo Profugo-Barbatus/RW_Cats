@@ -1,7 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?><DefPackage-SoundDef>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
 
   <SoundDef>
-    <defName>Fluffy_DomesticCat_Angry</defName>  
+    <defName>Fluffy_Pawn_Cat_Angry</defName>  
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Cat_Angry</li>
     </eventNames>  
@@ -37,7 +39,8 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Fluffy_DomesticCat_Call</defName>  
+    <defName>Fluffy_Pawn_Cat_Call</defName>
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Cat_Call</li>
     </eventNames>  
@@ -70,7 +73,8 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Fluffy_DomesticCat_Death</defName>  
+    <defName>Fluffy_Pawn_Cat_Death</defName>
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Cat_Death</li>
     </eventNames>  
@@ -89,7 +93,8 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Fluffy_DomesticCat_Hurt</defName>  
+    <defName>Fluffy_Pawn_Cat_Hurt</defName>  
+	<context>MapOnly</context>
     <eventNames>
       <li>Fluffy_Pawn_Cat_Hurt</li>
     </eventNames>  
@@ -110,4 +115,4 @@
     </subSounds>
   </SoundDef>
 
-</DefPackage-SoundDef>
+</Defs>

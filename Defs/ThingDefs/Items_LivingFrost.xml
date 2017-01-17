@@ -16,8 +16,7 @@
       <li>
         <compClass>CompForbiddable</compClass>
       </li>
-      <li>
-        <compClass>CompGlower</compClass>
+      <li Class="CompProperties_Glower">
         <glowRadius>4</glowRadius>
         <glowColor>(175,238,238,0)</glowColor>
       </li>
@@ -28,7 +27,7 @@
       <li>BodyPartOrImplant</li>
     </tradeTags>
     <thingCategories>
-      <li>BodyPartsAndImplants</li>
+      <li>BodyParts</li>
     </thingCategories>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
     <useHitPoints>true</useHitPoints>
